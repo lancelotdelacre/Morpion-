@@ -1,0 +1,122 @@
+header{
+    background-color: rgb(223, 132, 13);
+    box-sizing: content-box;
+    padding:0.5%;
+    text-align: center;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 4px 4px 0px white;
+}
+body{
+    background-color: rgb(92, 26, 26);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+}
+
+#resultat{
+    background-color: rgb(223, 132, 13);
+    border-radius: 5px 5px 5px 5px;
+    box-sizing: content-box;
+    padding: 0.2%;
+    margin-top:5%;
+    width:50%;
+    box-shadow: 4px 4px 0px white;
+    text-align: center;
+}
+
+#plateau{
+    position:relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+#fenetre{
+    box-sizing: content-box;
+    height: 400px;
+    width: 400px;
+}
+
+.case{
+    height: 33%;
+    width: 100%;
+    border: solid black 1px;
+    position: relative;
+    text-align: center;
+    font-size: 100%;
+    vertical-align: middle;
+    
+}
+
+.colonne{
+    height: 100%;
+    width: 33%; 
+    float: left;
+    background-color: ghostwhite;
+}
+
+.figure{
+    clear: both;
+    box-sizing: border-box;
+    margin-top:10%;
+    height: 80%;
+    width: 80%;
+
+}
+
+.invisible{
+    display: none;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    width:80%;
+    color: white;
+    background-color: rgb(223, 132, 13);
+    border-radius: 5px 5px 5px 5px;
+    line-height: 50px;
+    margin-top: 40px;
+    font-size: large;
+}
+
+button:hover{
+    background-color: gray;
+}
+
+#fenetre{
+    background-color: white;
+    margin-top: 30px;
+    color:black;
+}
+
+label{
+    color:black;
+}
+
+#jouer{
+    background-color: rgb(223, 132, 13);
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    width:50%;
+}
+
+#recommencer{
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 40%;
+    margin-left: 20%;
+    margin-top:60%;
+    
+}
+
+#form{
+    box-sizing: content-box;
+    padding-top:20%;
+    margin-left:20%;
+    height: 30%;
+    width: 60%;
+}
+
