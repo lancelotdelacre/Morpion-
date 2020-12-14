@@ -12,10 +12,15 @@ let choixJoueur2='';
 let x=0;
 let y=0;
 
+//création du plateau vide
 for(let i=0;i<plateau.length;i++){
     plateau[i]=[0,0,0];
  }
  
+ /**
+ * Remplace les variables créer précédemment par les réponses mentionnés dans le formulaires html
+ * @param{form} formulaire Le formulaire créer dans le code html  
+ */
 function player(formulaire){
     pseudo=document.getElementById("pseudo").value;
     pseudo2=document.getElementById("pseudo2").value;
@@ -24,9 +29,6 @@ function player(formulaire){
             console.log(i);
             if (i.value=="croix"){
                 choixJoueur1="<img src='image/croix.png' alt='croix' class='figure'>";
-            }
-            if (i.value=="cercle"){
-                choixJoueur1="<img src='image/cercle.png' alt='cercle' class='figure'>";
             }
             if (i.value=="singe"){
                 choixJoueur1="<img src='image/singe.png' alt='singe' class='figure'>";
@@ -45,7 +47,10 @@ function player(formulaire){
     return false;    
 }
 
-//envoie un message si il y a un gagant ou si le plateau est rempli
+ /**
+ * Observe le plateau et retourne un chiffre entre [0;3] si il y a un gagant ou que le plateau est rempli
+ * @return{number} 1,2 Si il y a un gagant. 3 Si il y a une égalité
+ */
 function gagner(){
     if (plateau[0][0]==1  && plateau[0][1]==1 && plateau[0][2]==1 || plateau[1][0]==1  && plateau[1][1]==1 && plateau[1][2]==1 || plateau[2][0]==1  && plateau[2][1]==1 && plateau[2][2]==1 || plateau[0][0]==1  && plateau[1][0]==1 && plateau[2][0]==1 || plateau[0][1]==1  && plateau[1][1]==1 && plateau[2][1]==1 || plateau[0][2]==1  && plateau[1][2]==1 && plateau[2][2]==1 || plateau[0][0]==1  && plateau[1][1]==1 && plateau[2][2]==1 || plateau[0][2]==1  && plateau[1][1]==1 && plateau[2][0]==1){
         document.getElementById("resultat").innerHTML="<p>"+pseudo+" a gagné</p>";
@@ -61,6 +66,11 @@ function gagner(){
     }
 }
 
+/**
+ * Choix d'une case du pateau, change la valeur du de la case sélectionner ainsi que la dynamique de la page.
+ * @param{number,number} x Pour l'abscisse du tableau Y pour l'ordonnée
+ * @return{number} 1,2 Si il y a un gagant. 3 Si il y a une égalité
+ */
 function jouer(x,y){
     if (gagner()!=1 && gagner()!=2 && gagner()!=0){
         if (j==1 && plateau[x][y]==0){
