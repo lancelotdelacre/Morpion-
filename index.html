@@ -12,13 +12,13 @@
 
         </header>
         <main>
-            <div id="resultat">
+            <div id="resultat" class="res">
                 <p></p>
             </div>
             <div id="fenetre">
                 <div class="dis" id="button">
                     <ul>
-                        <li><button id="facile"  onclick="dis('facile')">Facile</button></li>
+                        <li><button id="facile" onclick="dis('facile')">Facile</button></li>
                         <li><button id="moyen"  onclick="dis('moyen')">Moyen</button> </li>
                         <li><button id="deuxjoueurs" onclick="dis('2joueurs')">2 joueurs</button></li>
                     </ul> 
@@ -34,11 +34,7 @@
                                 <label for="pseudo">Pseudo 2:</label>
                                 <input type="text" class="pseudo" id="pseudo2" value="Joueur 2" maxlength="12">
                             </li>
-                            <li>Symbole J1:</li>
-                            <li>
-                                <label for="choix">Cercle</label>
-                                <input type="radio" class="pseudo" name="choix" value="cercle" required>
-                            </li>
+                            <li>Symbole Joueur 1:</li>
                             <li>    
                                 <label for="choix">Croix</label>
                                 <input type="radio" class="pseudo" name="choix" value="croix" required>
@@ -72,6 +68,9 @@
                         <section class="y2 case" id="x2y2" onclick="jouer(2,2)"></section>
                     </section>
                 </div>
+            </div>
+            <div class="res">
+                <p> Si vous ne connaissez pas les règles: <a href="https://fr.wikipedia.org/wiki/Morpion_(jeu)" target="_blank"> cliquez ici</a></p>
             </div>
         </main>
     </body>
