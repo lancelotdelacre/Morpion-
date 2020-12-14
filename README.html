@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JeuCool.Ma</title>
+        <script src="js/js.js"></script>
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Le morpion</h1>
+
+        </header>
+        <main>
+            <div id="resultat">
+                <p></p>
+            </div>
+            <div id="fenetre">
+                <div class="dis" id="button">
+                    <ul>
+                        <li><button id="facile"  onclick="dis('facile')">Facile</button></li>
+                        <li><button id="moyen"  onclick="dis('moyen')">Moyen</button> </li>
+                        <li><button id="deuxjoueurs" onclick="dis('2joueurs')">2 joueurs</button></li>
+                    </ul> 
+                </div>    
+                <div id="form" class="invisible dis">
+                    <form onSubmit='return player(this)'>
+                        <ul>
+                            <li>
+                                <label for="pseudo">Pseudo 1:</label>
+                                <input type="text" class="pseudo" id="pseudo" value="Joueur 1" maxlength="12">
+                            </li>
+                            <li>
+                                <label for="pseudo">Pseudo 2:</label>
+                                <input type="text" class="pseudo" id="pseudo2" value="Joueur 2" maxlength="12">
+                            </li>
+                            <li>Symbole J1:</li>
+                            <li>
+                                <label for="choix">Cercle</label>
+                                <input type="radio" class="pseudo" name="choix" value="cercle" required>
+                            </li>
+                            <li>    
+                                <label for="choix">Croix</label>
+                                <input type="radio" class="pseudo" name="choix" value="croix" required>
+                            </li>
+                            <li>    
+                                <label for="choix">Singe</label>
+                                <input type="radio" class="pseudo" name="choix" value="singe" required>
+                            </li>
+                            <li><input type="submit" value="jouer" id="jouer"></li>
+                        </ul>
+                    </form>
+                </div>
+                
+                <button onclick="recommencer()" class="invisible dis" id="recommencer">Recommencer</button>
+                
+                <div class="invisible dis" id="plateau">
+                    
+                    <section class="x0 colonne" id="colonne1">
+                        <section class="y0 case" id="x0y0" onclick="jouer(0,0)"></section>
+                        <section class="y1 case" id="x0y1" onclick="jouer(0,1)"></section>
+                        <section class="y2 case " id="x0y2" onclick="jouer(0,2)"></section>
+                    </section>
+                    <section class="x1 colonne" id="colonne2">
+                        <section class="y0 case" id="x1y0" onclick="jouer(1,0)"></section>
+                        <section class="y1 case" id="x1y1" onclick="jouer(1,1)"></section>
+                        <section class="y2 case" id="x1y2" onclick="jouer(1,2)"></section>
+                    </section>
+                    <section class="x2 colonne" id="colonne3">
+                        <section class="y0 case" id="x2y0" onclick="jouer(2,0)"></section>
+                        <section class="y1 case" id="x2y1" onclick="jouer(2,1)"></section>
+                        <section class="y2 case" id="x2y2" onclick="jouer(2,2)"></section>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
